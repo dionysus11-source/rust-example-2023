@@ -1,7 +1,6 @@
 extern crate libc;
 extern crate time;
 
-use std::ffi::CString;
 use std::time::Instant;
 
 extern "C" {
@@ -11,13 +10,11 @@ fn main() {
     // Call the foreign function using FFI
     let start = Instant::now();
     let result = unsafe { compute_pi(1000000) };
-    //let result = unsafe { double_input(1, 2) };
     let elapsed = start.elapsed();
     println!("FFI: result = {}, elapsed = {:?}", result, elapsed);
 
     // Call the native Rust function
     let start = Instant::now();
-    //let result = native_add(1, 2);
     let result = native_compute_pi(1000000);
     let elapsed = start.elapsed();
     println!("Native: result = {}, elapsed = {:?}", result, elapsed);
