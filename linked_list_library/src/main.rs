@@ -1,3 +1,5 @@
+mod slist;
 fn main() {
-    println!("Hello, world!");
+    let mut list = slist::List::new();
+    list.unshift(100);
 }

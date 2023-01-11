@@ -1,4 +1,4 @@
-/* 
+ 
 pub struct Node{
     data:i64,
     link: Option<Box<Node>>,
@@ -20,7 +20,7 @@ fn main() {
         }
     }
 }
-*/
+/* 
 enum Node{
     Empty,
     Cons(i64, Box<Node>),
@@ -43,3 +43,4 @@ fn main(){
         }
     }
 }
+*/
