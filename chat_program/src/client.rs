@@ -4,7 +4,7 @@ use std::thread;
 use std::time::Duration;
 
 fn main() {
-    let server_addr = "127.0.0.1:8888";
+    let server_addr = "127.0.0.1:2889";
     let mut socket = TcpStream::connect(server_addr).expect("can not connect to server");
     socket.set_nonblocking(true).expect("unexpecdted error");
     println!("{} connect",server_addr);
